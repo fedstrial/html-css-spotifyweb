@@ -1,0 +1,34 @@
+/* Css Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--nav-column-background: #000000;
+	--nav-text: #5B5B5B;
+	--upgrade-background: #080B12;
+	--main-search-background: #141922;
+	--main-search-section-text: #5F6267;
+	--main-search-artist-text: #64676D;
+	--spotify-green: #A5F32E;
+	--song-bar-background: #282828;
+}
+
+/* Webapp max dimension */
+html, body {
+    max-height: 100vh;
+}
+
+#main-content {
+	display: flex;
+}
+
+#nav-column {
+	width: 30%;
+}
+
+#search-and-upgrade {
+	width: 70%;
+}
