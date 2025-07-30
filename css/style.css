@@ -20,13 +20,19 @@
 /* Webapp max dimension */
 html,
 body {
-    max-height: 100vh;
     font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #080B12;
 }
 
 #main-content {
     display: flex;
 }
+
+/* SIDEBAR                                                                                 */
+/* --------------------------------------------------------------------------------------- */
 
 #nav-column {
     width: 15%;
@@ -34,7 +40,7 @@ body {
 }
 
 #nav-column-content {
-    height: 100vh;
+    height: calc(100vh - 130px);
     padding-left: 20px;
     padding-right: 25px;
     padding-top: 30px;
@@ -43,10 +49,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-#search-and-upgrade {
-    width: 85%;
 }
 
 #sidebar-icon {
@@ -118,3 +120,224 @@ button {
     margin-bottom: 20px;
 }
 
+#install-app-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#download-button-icon {
+    height: 1.5em;
+    padding-right: 20px;
+}
+
+#profile-button {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    color: white;
+}
+
+#profile-button-icon {
+    height: 3em;
+    margin-right: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    padding: 0 3px
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+
+/* MAIN PANEL */
+
+#search-and-upgrade {
+    width: 85%;
+
+}
+
+#upgrade-to-premium {
+    background-color: var(--upgrade-background);
+    text-align: right;
+}
+
+#upgrade-button {
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    border: white 2px solid;
+    border-radius: 80px;
+}
+
+#main-panel {
+    background-color: var(--main-search-background);
+    padding-right: 20px;
+    padding-left: 20px;
+    max-height: calc(100vh - (123px + 130px));
+    overflow: scroll;
+}
+
+#section-selector {
+    display: flex;
+    color: var(--main-search-section-text);
+    justify-content: center; 
+    gap: 50px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+#section-selector button:hover {
+    border-bottom: var(--spotify-green) 4px solid;
+    margin-bottom: -3px;
+}
+
+#recently-played {
+    padding-top: 50px
+}
+
+.main-section-title {
+    color: white;
+    font-size: 2.5rem;
+}
+
+#recently-played-items {
+    display: flex;
+    padding-top: 30px
+}
+
+.row-item {
+    padding-right: 20px;
+    width: 300px;
+}
+
+.cover-image { 
+    width: 100%
+}
+
+.music-title {
+    color: white;
+    text-align: center;
+    padding-top: 15px
+}
+
+.music-subtitle {
+    color: var(--main-search-artist-text);
+    text-align: center;
+    padding-top: 15px
+}
+
+
+#made-for-you {
+    padding-top: 80px;
+}
+
+.main-section-subtitle {
+    color: var(--main-search-artist-text);
+    padding: 20px 0;
+}
+
+#made-for-you-items {
+    display: flex;
+    padding-top: 20px
+}
+
+#popular-artists {
+    padding-top: 40px;
+}
+
+#popular-artists-items {
+    display: flex;
+    padding-top: 20px
+}
+
+.artist {
+    border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+
+/* BOTTOM SECTION  */
+
+
+#music-player-content {
+    background-color: var(--song-bar-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+#music-player-content-left {
+    display: flex;
+    align-items: center;
+}
+
+#current-playing-cover {
+    width: 80px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#track-info {
+    font-size: 0.8rem;
+}
+
+#track-info h4 {
+    color: var(--main-search-artist-text);
+}
+
+#player-like-favorite-buttons { 
+    color: var(--main-search-artist-text);
+    padding-left: 50px;
+    font-size: 1.4em;
+}
+
+#music-player-content-center {
+    width: 40%;
+}
+
+#music-controls {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.4rem;
+    align-items: center;
+}
+
+#music-player-play-container {
+    border: white 2px solid;
+    border-radius: 50%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 2px;
+}
+
+#music-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px
+}
+
+#music-slider-input {
+    width: 80%;
+}
+
+#music-player-right {
+    display: flex;
+    font-size: 1.5em;
+    align-items: center;
+    gap: 20px;
+    padding-right: 30px
+}
+
+/* --------------------------------------------------------------------------------------- */

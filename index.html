@@ -78,13 +78,181 @@
                 </div>
 
                 <div id="nav-column-content-bottom">
-                    <h2>Installa app</h2>
+                    <button id="install-app-button">
+                        <img src="assets/img/download.svg" alt="" id="download-button-icon">
+                        <h2>Installa app</h2>
+                    </button>
+
+                    <hr>
+
+                    <button id="profile-button">
+                        <img src="assets/img/profile.svg" alt="" id="profile-button-icon">
+                        <h2>John Doe</h2>
+                    </button>
                 </div>
             </div>
         </div>
 
         <div id="search-and-upgrade">
+            <div id="upgrade-to-premium">
+                <button id="upgrade-button">
+                    <h2>EFFETTUA L'UPGRADE</h2>
+                </button>
+            </div>
 
+            <div id="main-panel">
+                <div id="section-selector">
+                    <button>
+                        <h2>IN EVIDENZA</h2>
+                    </button>
+                    <button>
+                        <h2>PODCAST</h2>
+                    </button>
+                    <button>
+                        <h2>CLASSIFICHE</h2>
+                    </button>
+                    <button>
+                        <h2>GENERI E MOOD</h2>
+                    </button>
+                    <button>
+                        <h2>NUOVE USCITE</h2>
+                    </button>
+                    <button>
+                        <h2>SCOPRI</h2>
+                    </button>
+                </div>
+
+                <div id="recently-played">
+                    <h2 class="main-section-title">Recently Played</h2>
+
+                    <div id="recently-played-items">
+
+                        <div class="row-item">
+                            <img src="assets/img/metal_lifting.jpg" alt="" class="cover-image">
+                            <h2 class="music-title">Heavy Metal</h2>
+                            <h4 class="music-subtitle">Subtitle</h4>
+                        </div>
+
+
+                        <div class="row-item">
+                            <img src="assets/img/stranger.jpeg" alt="" class="cover-image">
+                            <h2 class="music-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h2>
+                            <h4 class="music-subtitle">Kyle Dixon & Michael Stein</h4>
+                        </div>
+
+
+                        <div class="row-item">
+                            <img src="assets/img/aquietplace.jpeg" alt="" class="cover-image">
+                            <h2 class="music-title">A quiet Place</h2>
+                            <h4 class="music-subtitle">Subtitle</h4>
+                        </div>
+
+
+                        <div class="row-item">
+                            <img src="assets/img/split.jpeg" alt="" class="cover-image">
+                            <h2 class="music-title">Split</h2>
+                            <h4 class="music-subtitle">Subtitle</h4>
+                        </div>
+
+
+                        <div class="row-item">
+                            <img src="assets/img/cure.jpeg" alt="" class="cover-image">
+                            <h2 class="music-title">A cure for wellness</h2>
+                            <h4 class="music-subtitle">Subtitle</h4>
+                        </div>
+
+                        <div class="row-item">
+                            <img src="assets/img/sinister.jpeg" alt="" class="cover-image">
+                            <h2 class="music-title">Sinister</h2>
+                            <h4 class="music-subtitle">Subtitle</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="made-for-you">
+                    <h2 class="main-section-title">Creato per John Doe</h2>
+                    <h4 class="main-section-subtitle">Piu ascolti, piu accurati saranno i suggerimenti.</h4>
+                    <div id="made-for-you-items">
+
+                        <div class="row-item">
+                            <img src="assets/img/radar.jpeg" alt="" class="cover-image">
+                            <h2 class="music-title">Release Radar</h2>
+                        </div>
+
+
+                        <div class="row-item">
+                            <img src="assets/img/mixdaily.jpeg" alt="" class="cover-image">
+                            <h2 class="music-title">Daily mix 1</h2>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="popular-artists">
+                    <h2 class="main-section-title">Artisti piu popolari</h2>
+                    <h4 class="main-section-subtitle">Piu ascolti, piu accurati saranno i suggerimenti.</h4>
+
+                    <div id="popular-artists-items">
+
+                        <div class="row-item">
+                            <img src="assets/img/youg.jpeg" alt="" class="cover-image artist">
+                            <h2 class="music-title">Release Radar</h2>
+                        </div>
+
+
+                        <div class="row-item">
+                            <img src="assets/img/einaudi.jpeg" alt="" class="cover-image artist">
+                            <h2 class="music-title">Daily mix 1</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="music-player">
+        <div id="music-player-content">
+            <div id="music-player-content-left">
+
+                <img src="assets/img/sinister.jpeg" alt="" id="current-playing-cover">
+                <div id="track-info">
+                    <h2>Sinister</h2>
+                    <h4>Brano Nome</h4>
+                </div>
+
+                <div id="player-like-favorite-buttons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+
+            </div>
+
+            <div id="music-player-content-center">
+
+                <div id="music-controls">
+                    <i class="fa-solid fa-shuffle" id="shuffle-button"></i>
+                    <i class="fa-solid fa-backward-step" id="step-backwards-button"></i>
+                    <div id="music-player-play-container">
+                        <i class="fa-solid fa-play" id="pause-play-button"></i>
+                    </div>
+                    <i class="fa-solid fa-forward-step" id="step-forward-button"></i>
+                    <i class="fa-solid fa-rotate-right" id="replay-button"></i>
+                </div>
+
+                <div id="music-slider">
+                    <h4>0:25</h4>
+                    <input type="range" name="" id="music-slider-input" value="50">
+                    <h4>4:35</h4>
+                </div>
+
+            </div>
+
+            <div id="music-player-right">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-display"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" name="" id="volume-slider-input" value="50">
+            </div>
         </div>
     </div>
 </body>
