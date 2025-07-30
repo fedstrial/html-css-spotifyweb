@@ -21,10 +21,12 @@
 html,
 body {
     font-family: "Montserrat", sans-serif;
+    max-height: 100vh;
 }
 
 body {
     background-color: #080B12;
+    font-size: 10px;
 }
 
 #main-content {
@@ -90,8 +92,8 @@ button {
 }
 
 #playlist-button {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 40px
 }
@@ -185,7 +187,7 @@ button {
 #section-selector {
     display: flex;
     color: var(--main-search-section-text);
-    justify-content: center; 
+    justify-content: center;
     gap: 50px;
     padding-top: 30px;
     padding-bottom: 5px;
@@ -206,16 +208,19 @@ button {
 }
 
 #recently-played-items {
-    display: flex;
     padding-top: 30px
 }
 
-.row-item {
-    padding-right: 20px;
-    width: 300px;
+.row {
+    display: flex;
+    gap: 30px
 }
 
-.cover-image { 
+.row-item {
+    width: calc((100% / 6) - (150px / 6))
+}
+
+.cover-image {
     width: 100%
 }
 
@@ -242,7 +247,6 @@ button {
 }
 
 #made-for-you-items {
-    display: flex;
     padding-top: 20px
 }
 
@@ -251,7 +255,6 @@ button {
 }
 
 #popular-artists-items {
-    display: flex;
     padding-top: 20px
 }
 
@@ -268,13 +271,29 @@ button {
 #music-player-content {
     background-color: var(--song-bar-background);
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     color: white;
+    padding-left: 20px;
+    padding-right: 20px
 }
 
 #music-player-content-left {
     display: flex;
+    align-items: center;
+}
+
+
+#music-player-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#music-player-content-right {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -283,7 +302,6 @@ button {
     margin-top: 20px;
     margin-bottom: 30px;
     margin-right: 20px;
-    margin-left: 20px;
 }
 
 #track-info {
@@ -294,26 +312,25 @@ button {
     color: var(--main-search-artist-text);
 }
 
-#player-like-favorite-buttons { 
+#player-like-favorite-buttons {
     color: var(--main-search-artist-text);
     padding-left: 50px;
     font-size: 1.4em;
 }
 
-#music-player-content-center {
-    width: 40%;
-}
+#music-player-content-center {}
 
 #music-controls {
     display: flex;
     justify-content: center;
     gap: 40px;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     align-items: center;
 }
 
 #music-player-play-container {
     border: white 2px solid;
+    font-size: 2rem;
     border-radius: 50%;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -323,21 +340,104 @@ button {
 
 #music-slider {
     display: flex;
+    padding-top: 30px;
+    font-size: 1rem;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 30px
-}
-
-#music-slider-input {
+    gap: 40px;
     width: 80%;
 }
+
+#music-slider-input {}
+
+#volume-slider-input {}
 
 #music-player-right {
     display: flex;
     font-size: 1.5em;
     align-items: center;
     gap: 20px;
-    padding-right: 30px
+}
+
+/* HELLISH INPUT STYLES (more tbd but doesn't appear possible to make it the same without JavaScript) */
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+    background: white;
+    height: 0.2rem;
+    border-radius: 2px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    background: white;
+    height: 0.2rem;
+    border-radius: 2px;
+}
+
+/* ---- */
+
+
+/* --------------------------------------------------------------------------------------- */
+
+
+/* RESPONSIVE TABLET (MEDIUM DIMENSIONS) */
+
+@media screen and (max-width: 878px) {
+    body {
+        font-size: 10px
+    }
+
+    #section-selector {
+        font-size: 0.5rem;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .row-item {
+        width: calc((100% / 4) - (30px / 4));
+    }
+
+    #nav-column {
+        width: 30%;
+        max-height: 100%;
+    }
+
+    #search-and-upgrade {
+        width: 70%;
+    }
+
+    #music-player {
+        font-size: 0.5rem;
+    }
+
+    #pause-play-button {
+        font-size: 1rem;
+    }
+
+    #music-player-play-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    #music-player-content-left,
+    #music-player-content-center,
+    #music-player-content-right {
+        gap: 10px;
+        flex: 1;
+    }
 }
 
 /* --------------------------------------------------------------------------------------- */
